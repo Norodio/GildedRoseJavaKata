@@ -6,10 +6,8 @@ public class Conjured extends Item implements IVisitable{
     }
 
     public Conjured(String name, int sellIn, int quality){
-        super();
-        this.setName(name);
-        this.setSellIn(sellIn);
-        this.setQuality(quality);
+        super(name,sellIn,quality);
+
     }
 
     @Override

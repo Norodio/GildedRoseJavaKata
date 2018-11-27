@@ -9,11 +9,11 @@ public class Inventory {
         this.items = items;
     }
 
-    public Item[] getItems(){
+    public Item[] getItems() {
         return items;
     }
 
-//    public Inventory() {
+    //    public Inventory() {
 //        super();
 //        items = new Item[]{
 //                new Item("+5 Dexterity Vest", 10, 20),
@@ -25,7 +25,7 @@ public class Inventory {
 //        };
 //
 //    }
-    public Inventory(){
+    public Inventory() {
         super();
         items = new Item[]{
                 new Vest("+5 Dexterity Vest", 10, 20),
@@ -101,10 +101,16 @@ public class Inventory {
     }
     */
 
-    void updateQuality(){
-        UpdateQuality aVisitor = new UpdateQuality();
-        for(int i = 0;i<items.length; i++){
+    void updateQuality() {
+        UpdateQuality Visitor = new UpdateQuality();
+        for (int i = 0; i < items.length; i++) {
+            items[i].accept(Visitor);
+        }
+    }
 
+    void updateSellin() {
+        for (int i = 0; i < items.length; i++) {
+            items[i].setSellIn(items[i].getSellIn() - 1);
         }
     }
 

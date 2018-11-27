@@ -6,10 +6,8 @@ public class Sulfuras extends Item implements IVisitable{
     }
 
     public Sulfuras(String name, int sellIn, int quality){
-        super();
-        this.setName(name);
-        this.setSellIn(sellIn);
-        this.setQuality(quality);
+        super(name,sellIn,quality);
+
     }
 
     @Override
