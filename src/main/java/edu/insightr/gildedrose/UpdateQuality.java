@@ -46,6 +46,8 @@ public class UpdateQuality implements IVisitor {
         } else {
             item.setQuality(item.getQuality() - 1);
         }
+
+        corrector(item);
     }
 
     public void visit(Sulfuras item) {
