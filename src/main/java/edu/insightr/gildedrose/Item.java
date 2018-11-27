@@ -1,11 +1,17 @@
 package edu.insightr.gildedrose;
 
-public class Item {
+public abstract class Item implements Strategy{
 
     private String name;
     private int sellIn;
 
     private int quality;
+
+    public Item() {
+        this.name = null;
+        this.sellIn = -1;
+        this.quality = -1;
+    }
 
     public Item(String name, int sellIn, int quality) {
         super();
